@@ -29,4 +29,4 @@ jobs:
           format: 'github'
           output: 'dependency-results.sbom.json'
           image-ref: '.'
-          GITHUB_TOKEN: ${{ github.token }}
+          github-pat: ${{ github.token }}
