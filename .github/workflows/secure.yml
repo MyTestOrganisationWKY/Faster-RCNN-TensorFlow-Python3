@@ -30,3 +30,10 @@ jobs:
           output: 'dependency-results.sbom.json'
           image-ref: '.'
           github-pat: ${{ github.token }}
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: dependency-results.sbom.json
+          path: dependency-results.sbom.json
+          retention-days: 3
